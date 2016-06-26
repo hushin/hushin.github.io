@@ -10,7 +10,7 @@ title: ずっと未定
 email: nnnnot+github@gmail.com
 description: "技術的なメモなどを残すブログ"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hushin.github.io" # the base hostname & protocol for your site
+url: "http://hushin-text.fdempa.com" # the base hostname & protocol for your site
 twitter_username: hush_in
 github_username:  hushin
 exclude: [vendor]

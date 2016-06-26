@@ -1,4 +1,6 @@
-# hushin.github.io
+# hushin blog
+
+http://hushin-text.fdempa.com/
 
 ## Installation
 
