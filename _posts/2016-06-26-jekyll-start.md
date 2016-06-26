@@ -100,3 +100,8 @@ _posts/YEAR-MONTH-DAY-title.md にファイルを作る
 ```
 bundle exec jekyll post "hoge fuga"
 ```
+
+## その他参考にさせていただいたサイト
+
+- https://github.com/zerobase/zerobase.github.io
+- https://github.com/efcl/efcl.github.io
