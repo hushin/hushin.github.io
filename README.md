@@ -7,6 +7,12 @@
 3. `bundle exec jekyll serve`
 4. Open http://0.0.0.0:4000
 
+## 新しく記事を書く
+
+```
+bundle exec jekyll post "hoge fuga"
+```
+
 ## License
 
 - Contents: [Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/) <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
