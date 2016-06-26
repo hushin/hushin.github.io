@@ -77,6 +77,8 @@ bundle exec jekyll serve
 
 ### その他設定
 
+最初は設定するものが多いので、 [issue](https://github.com/hushin/hushin.github.io/issues) を立てて管理するようにしました。
+
 - 独自ドメイン
 - コメント欄
   - [Disqus](https://disqus.com/)
