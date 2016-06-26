@@ -29,3 +29,6 @@ gems:
   - jekyll-feed
   - jekyll-coffeescript
   - jekyll-paginate
+
+# Google Analytics
+google_analytics_tracking_id: UA-3232511-9
