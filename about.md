@@ -4,12 +4,19 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+## 自己紹介
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+名前 hush_in （はっしゅ/不信）
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+昔は FlashやActionScriptを触って今は主にJavaScriptを触ってます
+
+### 連絡先
+
+- Twitter [@hush_in](https://twitter.com/hush_in)
+- <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+
+## 他のブログ
+
+* [はっしゅろぐ](http://hush-in.hatenablog.com/)
+* [FLATV](http://flatv.fdempa.com/)
+* [NGTV](http://ngtv.fdempa.com/)
