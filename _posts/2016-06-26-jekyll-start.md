@@ -4,7 +4,9 @@ title: Jekyll と GitHub Pages で blog を書く
 date:   2016-06-26 15:05:53 +0900
 ---
 
-## ブログモチベーション
+Jekyll と GitHub Pages で blog 及び静的なサイトを作れるようにしました
+
+## モチベーション
 
 - markdown で書きたい
 - git で管理したい
@@ -103,7 +105,7 @@ _posts/YEAR-MONTH-DAY-title.md にファイルを作る
 bundle exec jekyll post "hoge fuga"
 ```
 
-## その他参考にさせていただいたサイト
+## 参考にさせていただいたサイト
 
-- https://github.com/zerobase/zerobase.github.io
-- https://github.com/efcl/efcl.github.io
+- [https://github.com/efcl/efcl.github.io](https://github.com/efcl/efcl.github.io)
+- [https://github.com/zerobase/zerobase.github.io](https://github.com/zerobase/zerobase.github.io)
