@@ -3,13 +3,17 @@ layout: post
 title: Kindle本をブクログで蔵書管理する最初の一歩
 ---
 
-未読本を管理するために [ブクログ](http://booklog.jp/users/hush1n) を始めました。
+未読本を管理するためにブクログを始めました。
+
+[hush_in 本棚 - ブクログ](http://booklog.jp/users/hush1n/)
 
 まず本棚にある紙の未読本（70冊程）はブクログのアプリでバーコードスキャンしました。
 
 次にKindleで買った本の蔵書管理へ。
 Kindleで買っている本が 800冊 くらいあり、手動で登録するのは辛いので、
 [コンテンツと端末の管理](https://www.amazon.co.jp/gp/digital/fiona/manage) からデータを取るようにしました。
+
+## 備忘録
 
 ここではデータを取得してCSVで登録する備忘録を書いておきます。自分用のメモなので解説少な目です。
 
@@ -37,12 +41,12 @@ GoogleスプレッドシートでCSVを読み込んで整形していく。
 
 - ブクログに登録しない本はここで削除する。
 - CSVで読書状況も登録できるので列を追加してつける
-![spreadsheet](images/2016/spreadsheet.png)
+![spreadsheet](../images/2016/spreadsheet.png)
 
 
 [まとめて登録 (CSV)](http://booklog.jp/input/file)
 ここにフォーマットが載っているので揃える。
-![spreadsheet2](images/2016/spreadsheet2.png)
+![spreadsheet2](../images/2016/spreadsheet2.png)
 
 
 - 読み終わった本は登録日時の一日後など適当に埋めた。
@@ -50,9 +54,8 @@ GoogleスプレッドシートでCSVを読み込んで整形していく。
 - 800件のCSV読み込ませるのが不安だったが、十秒くらいでインポートできた。
 
 
-### やってみてまとめ
+## やってみたまとめ
 
 - Kindleでは800冊中約600冊は読み終えていて、200冊積読していました。
   - ブクログ登録前は何を読んでないか把握できていない状態でモヤモヤしていましたが、登録することで一覧できてすっきりしました。
 - 追加で登録していくのは簡略化したいです。こちらの記事が参考になりそうです。 [Kindle本をブクログに自動登録する - tateren’s diary](http://tateren.hateblo.jp/entry/2016/10/03/025425)
-  -
