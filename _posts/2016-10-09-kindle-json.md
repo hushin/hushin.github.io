@@ -27,9 +27,9 @@ startIndexが0なので100ずつ増やして全部取得する。ファイル名
 
 [jqコマンド](http://stedolan.github.io/jq/) を使って整形していく。
 
-`jq '.OwnershipData.items[] | .title' data1.json` などとするとタイトル一覧が表示されるはず。
+手始めに `jq '.OwnershipData.items[] | .title' data1.json` などと実行するとタイトル一覧が表示されることを確認。
 
-抜き出したい要素を選んでcsv化する。 slurpオプションで複数JSONを扱える。
+次に抜き出したい要素を選んでCSV化する。 slurpオプションで複数JSONを扱える。
 
 ```
 jq -r -s '.[].OwnershipData.items[] | [.title, .authors, .asin, .acquiredDate, .acquiredTime, .sortableTitle, .sortableAuthors, .numericFileSize, .isPurchased] | @csv' *.json > all.csv
@@ -37,17 +37,16 @@ jq -r -s '.[].OwnershipData.items[] | [.title, .authors, .asin, .acquiredDate, .
 
 ### GoogleスプレッドシートでCSVを読み込んで整形
 
-GoogleスプレッドシートでCSVを読み込んで整形していく。
+Googleスプレッドシートで先程のCSVを読み込んで整形していく。
 
 - ブクログに登録しない本はここで削除する。
 - CSVで読書状況も登録できるので列を追加してつける
-![spreadsheet](../images/2016/spreadsheet.png)
+![spreadsheet](/images/2016/spreadsheet.png)
 
 
 [まとめて登録 (CSV)](http://booklog.jp/input/file)
-ここにフォーマットが載っているので揃える。
-![spreadsheet2](../images/2016/spreadsheet2.png)
-
+ここにフォーマットが載っているので別シートで揃える。
+![spreadsheet2](/images/2016/spreadsheet2.png)
 
 - 読み終わった本は登録日時の一日後など適当に埋めた。
 - スプレッドシートから出力されるCSVにはダブルクオーテーションがついてないので手動で微修正。`,`を`","`に置換して行頭と行末に`"`を追加。
