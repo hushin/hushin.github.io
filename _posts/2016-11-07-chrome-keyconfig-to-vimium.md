@@ -17,6 +17,7 @@ Chrome拡張のKeyconfigでキーボードショートカットを変えてい�
   * [diff](https://github.com/haburibe/ChromeKeyconfig/commit/05ed8adf2771c2118f438799ce5cb2bfb1e16cf1) を見ると設定を`Esc`から`Escape`など、修正が必要そう
 * せっかくだしVimperatorっぽいものを使ってみようと思い、[Vimium](https://vimium.github.io/)を導入
   * 設定はこんな感じ
+
 ```
 # Atom みたいに Cmd-pで開けるように
 map <m-p> Vomnibar.activateInNewTab
@@ -54,6 +55,9 @@ map e LinkHints.activateModeToOpenInNewTab
     - Markdown形式でURLをクリップボードにコピーする下記scriptを書いた。ブックマークレットをクリックしたら成功するが、Vimiumから上記の方法で実行するとコピーされない！
       - execCommandはユーザー操作からじゃないとfalseを返して失敗するっぽい？
       - しょうがなくこれだけはアドレスバーから名前打って実行。。
+
+
+
 ```js
 function copyToClipboard (text) {
   var clipNode = document.createElement('textarea');
