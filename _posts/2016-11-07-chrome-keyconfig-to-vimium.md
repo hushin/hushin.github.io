@@ -36,7 +36,7 @@ map e LinkHints.activateModeToOpenInNewTab
 ### 良かった点
 
 - スクロールがKeyconfigよりなめらか
-- Hit a Hint 便利 （[Moly HaH](https://chrome.google.com/webstore/detail/moly-hah/pjoacnohgednppackhamgfalpkffeeek?hl=ja) などでもできましたが、、）
+- Hit a Hint 便利 （[Moly HaH](https://chrome.google.com/webstore/detail/moly-hah/pjoacnohgednppackhamgfalpkffeeek?hl=ja) などでもできましたが、一つの拡張で完結しているので良い）
 - `o` `O` で履歴やブックマークなど高速に検索できる
 
 ### 悪かった点
