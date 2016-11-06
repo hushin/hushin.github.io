@@ -36,7 +36,7 @@ map e LinkHints.activateModeToOpenInNewTab
 ### 良かった点
 
 - スクロールがKeyconfigよりなめらか
-- Hit a Hint 便利 （[Moly HaH](https://chrome.google.com/webstore/detail/moly-hah/pjoacnohgednppackhamgfalpkffeeek?hl=ja) などでもできましたが、一つの拡張で完結しているので良い）
+- Hit a Hint 便利 （[Moly HaH](https://chrome.google.com/webstore/detail/moly-hah/pjoacnohgednppackhamgfalpkffeeek?hl=ja) などでもできますが、一つの拡張で完結しているので良い）
 - `o` `O` で履歴やブックマークなど高速に検索できる
 
 ### 悪かった点
@@ -46,6 +46,7 @@ map e LinkHints.activateModeToOpenInNewTab
 - 特定のURLを開くことができない
   -  Keyconfigではブックマークレットを登録してショートカット一発で呼べるのが良かったが、それができない
   - issueはあったが作られてない [Quick Marks · Issue #53 · philc/vimium](https://github.com/philc/vimium/issues/53)
+    - https://github.com/philc/vimium/issues/1392 https://github.com/philc/vimium/issues/2193 このあたりも見ておきたい
   - cVimという別の拡張でその機能があったが、ブックマークレットを動かすとgoogle検索結果に飛んでだめでした。参考：[cVim: Google ChromeのVimperatorみたいな拡張](http://rcmdnk.github.io/blog/2014/10/22/computer-firefox/)
 - ブックマークレット妥協案
   - ブックマークレットをブックマークに登録
