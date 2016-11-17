@@ -16,10 +16,7 @@ title: デフォルトブラウザをChromeからFirefoxに変えた
 .vimperatorrcはこちら
 [dotfiles/.vimperatorrc at master · hushin/dotfiles · GitHub](https://github.com/hushin/dotfiles/blob/master/.vimperatorrc)
 
-### `about:config`
-
-- `browser.tabs.loadDivertedInBackground` を true
-  - 新しいタブはバックグランドで開く
+about:config や ユーザースタイルシートもかけて便利
 
 ### 他に入れた拡張
 
