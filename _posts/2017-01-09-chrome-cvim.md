@@ -66,7 +66,8 @@ CSSを一部修正してSave
 * 良かった
   * スクロールがスムーズ
 * 不満点
-  * vimperatorのcopy.jsプラグイン相当の機能が欲しい
+  * ~~vimperatorのcopy.jsプラグイン相当の機能が欲しい~~
+    * Code blocks でJSが書けたので解決
   * Firefoxと違って新しいタブやページ読み込み中ショートカットが使えない
   * cncpcompletion のバグ
     * コマンドモードの候補をTABではなく`<C-n>` `<C-p>` で選択したいが、なぜか`<C-n>`で新しいタブが開いてしまう https://github.com/1995eaton/chromium-vim/issues/390
