@@ -12,7 +12,7 @@ Vimperatorライクな拡張を使いたかったので、
 
 ### chrome://extensions/ の cVim のオプション
 
-gistから設定をインポートできるらしいので 下記を設定 https://gist.github.com/hushin/f1a3d90b9db63026e798a90795733c6b
+gistから設定をインポートできるらしいので 下記を設定 [https://gist.github.com/hushin/f1a3d90b9db63026e798a90795733c6b](https://gist.github.com/hushin/f1a3d90b9db63026e798a90795733c6b)
 
 CSSを一部修正してSave
 
