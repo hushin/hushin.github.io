@@ -242,7 +242,9 @@
 }
 
 .post-navigation {
-  margin-bottom: $spacing-unit;
-  display: flex;
-  justify-content: space-between;
+    margin-top: $spacing-unit;
+    padding-top: $spacing-unit;
+    border-top: 1px solid $grey-color-light;
+    display: flex;
+    justify-content: space-between;
 }
