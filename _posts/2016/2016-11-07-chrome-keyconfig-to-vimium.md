@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Chrome拡張のKeyconfigからVimiumに乗り換えた
+tags:
+  - chrome
 ---
 
 Chrome拡張のKeyconfigでキーボードショートカットを変えていたのですががChrome Version54から使えなくなりました。

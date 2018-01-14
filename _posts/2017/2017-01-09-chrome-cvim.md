@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Chrome cVimの設定メモ
+tags:
+  - chrome
 ---
 前回ChromeからFirefoxに乗り換えたのですが、
 Firefoxのタブを閉じたり移動するときにCPU100%使って固まることが頻繁に起きるようになったので結局Chromeに戻ってきました。

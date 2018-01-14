@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Jekyll と GitHub Pages で blog を書く
-date:   2016-06-26 15:05:53 +0900
+date: '2016-06-26 15:05:53 +0900'
+tags:
+  - jekyll
+  - github
 ---
 
 Jekyll と GitHub Pages で blog 及び静的なサイトを作れるようにしました

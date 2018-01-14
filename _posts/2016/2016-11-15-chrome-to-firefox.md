@@ -1,6 +1,8 @@
 ---
 layout: post
 title: デフォルトブラウザをChromeからFirefoxに変えた
+tags:
+  - firefox
 ---
 最近のChrome微妙だと思うことが増えてきました。
 

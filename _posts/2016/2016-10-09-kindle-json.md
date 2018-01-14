@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Kindle本をブクログで蔵書管理する最初の一歩
+tags:
+  - kindle
 ---
 
 未読本を管理するためにブクログを始めました。
