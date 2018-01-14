@@ -76,7 +76,7 @@ bundle exec jekyll serve
 
 としたがエラーになりました
 
-`exclude: [vendor]` を _config.yml に追記するといいらしいです [invalid date '0000-00-00' from template · Issue #2938 · jekyll/jekyll](https://github.com/jekyll/jekyll/issues/2938)
+`exclude: [vendor]` を \_config.yml に追記するといいらしいです [invalid date '0000-00-00' from template · Issue #2938 · jekyll/jekyll](https://github.com/jekyll/jekyll/issues/2938)
 
 一旦 commit , pushして反映されることを確認
 
@@ -97,7 +97,7 @@ bundle exec jekyll serve
 
 ### 記事の書き方
 
-_posts/YEAR-MONTH-DAY-title.md にファイルを作る
+\_posts/YEAR-MONTH-DAY-title.md にファイルを作る
 
 参考：[Writing posts - Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/posts/)
 
