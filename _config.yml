@@ -21,7 +21,8 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
+theme: minima
+plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-redirect-from
