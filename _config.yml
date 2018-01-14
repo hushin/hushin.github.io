@@ -8,7 +8,8 @@
 # Site settings
 title: ちぎっては投げるところ
 email: nnnnot+github@gmail.com
-description: "技術的なメモや考えたことを残すブログ"
+description: '技術的なメモや考えたことを残すブログ
+<a href="https://github.com/hushin/hushin.github.io">https://github.com/hushin/hushin.github.io</a> でコード管理しています。'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hushin-text.fdempa.com" # the base hostname & protocol for your site
 twitter_username: hush_in
