@@ -11,9 +11,8 @@ http://hushin-text.fdempa.com/
 
 ## 新しく記事を書く
 
-```
-bundle exec jekyll post "hoge fuga"
-```
+- Atom の Markdown writer から 'New Post'
+- New Draft -> Publish Draft で 下書きを貯めてから公開に移せる
 
 ## License
 
