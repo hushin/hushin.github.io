@@ -241,6 +241,18 @@
     }
 }
 
+.share ul {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  & > li {
+    margin-right: .3rem;
+    & * {
+      vertical-align: bottom;
+    }
+  }
+}
+
 .post-navigation {
     margin-top: $spacing-unit;
     padding-top: $spacing-unit;
