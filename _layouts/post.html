@@ -12,6 +12,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include nav-share.html %}
+
   <div class="post-navigation">
     {% if page.previous.url %}
       <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
