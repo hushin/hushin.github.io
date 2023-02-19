@@ -13,6 +13,12 @@ http://hushin-text.fdempa.com/
 - Atom の Markdown writer から 'New Post'
 - New Draft -> Publish Draft で 下書きを貯めてから公開に移せる
 
+## update
+
+```
+bundle update github-pages
+```
+
 ## License
 
 - Contents: [Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/) <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
