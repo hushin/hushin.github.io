@@ -175,34 +175,6 @@ dotfiles/.vimperat...</description>
       </item>
     
       <item>
-        <title>Kindle本をブクログで蔵書管理する最初の一歩</title>
-        <description>未読本を管理するためにブクログを始めました。
-
-hush_in 本棚 - ブクログ
-
-まず本棚にある紙の未読本（70冊程）はブクログのアプリでバーコードスキャンしました。
-
-次にKindleで買った本の蔵書管理へ。
-Kindleで買っている本が 800冊 くらいあり、手動で登録するのは辛いので、
-コンテンツと端末の管理 からデータを取るようにしました。
-
-備忘録
-
-ここではデータを取得してCSVで登録する備忘録を書いておきます。自分用のメモなので解説少な目です。
-
-JSONを取得
-
-Chromeの開発者ツールを開き、 ref=myx_ajax のリクエストのうち OwnershipDat...</description>
-        <pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate>
-        <link>http://hushin-text.fdempa.com/2016/10/09/kindle-json.html</link>
-        <guid isPermaLink="true">http://hushin-text.fdempa.com/2016/10/09/kindle-json.html</guid>
-        
-        <category>kindle</category>
-        
-        
-      </item>
-    
-      <item>
         <title>Jekyll と GitHub Pages で blog を書く</title>
         <description>Jekyll と GitHub Pages で blog 及び静的なサイトを作れるようにしました
 
