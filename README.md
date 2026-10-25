@@ -2,8 +2,7 @@
 
 https://hushin-text.fdempa.com/
 
-Jekyll で生成したサイトを、ビルド済みの静的ファイルとして `public/` にコミットしています。
-Netlify は `public/` の内容をそのまま配信します。
+Jekyll で生成したサイトを、ビルド済みの静的ファイルとして `public/` にコミットしています。Netlify は `public/` の内容をそのまま配信します。
 
 ## 構成
 
