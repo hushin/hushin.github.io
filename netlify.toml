@@ -1,0 +1,4 @@
+[build]
+  # サイトはビルド済みの静的ファイルをコミットしているため、何も実行しない
+  command = "true"
+  publish = "public"

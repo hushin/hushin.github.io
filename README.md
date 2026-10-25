@@ -1,23 +1,29 @@
 # hushin blog
 
-http://hushin-text.fdempa.com/
+https://hushin-text.fdempa.com/
 
-## Installation
+Jekyll で生成したサイトを、ビルド済みの静的ファイルとして `public/` にコミットしています。
+Netlify は `public/` の内容をそのまま配信します。
 
-1. `bundle install`
-2. `bundle exec jekyll serve`
-3. Open http://127.0.0.1:4000/
+## 構成
 
-## 新しく記事を書く
+- `public/`: 配信される静的ファイル一式
+- `netlify.toml`: Netlify のビルド・配信設定
 
-- Atom の Markdown writer から 'New Post'
-- New Draft -> Publish Draft で 下書きを貯めてから公開に移せる
+## ローカルで確認する
 
-## update
-
+```sh
+python3 -m http.server 4000 --directory public
 ```
-bundle update github-pages
-```
+
+http://localhost:4000/ を開きます。
+
+## 更新する場合
+
+`public/` 配下の HTML / CSS を直接編集して commit・push してください。
+Netlify ではビルドコマンドは実行されません。
+
+以前の Jekyll ソース（記事の Markdown など）は git の履歴に残っています。
 
 ## License
 

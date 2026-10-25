@@ -1,0 +1,53 @@
+{
+  "posts": [
+    
+    {
+      "title": "git, tig の設定を見直したら捗った",
+      "url": "http://hushin-text.fdempa.com/2018/02/04/update-git-config.html",
+      "date": "2018-02-04T23:51:00+00:00"
+    },
+    
+    {
+      "title": "入門git読んだ",
+      "url": "http://hushin-text.fdempa.com/2018/02/04/starter-git.html",
+      "date": "2018-02-04T22:37:00+00:00"
+    },
+    
+    {
+      "title": "npmモジュールの雛形を作るスクリプト",
+      "url": "http://hushin-text.fdempa.com/2018/01/28/npm-setup.html",
+      "date": "2018-01-28T14:18:00+00:00"
+    },
+    
+    {
+      "title": "Chrome cVimの設定メモ",
+      "url": "http://hushin-text.fdempa.com/2017/01/09/chrome-cvim.html",
+      "date": "2017-01-09T00:00:00+00:00"
+    },
+    
+    {
+      "title": "デフォルトブラウザをChromeからFirefoxに変えた",
+      "url": "http://hushin-text.fdempa.com/2016/11/15/chrome-to-firefox.html",
+      "date": "2016-11-15T00:00:00+00:00"
+    },
+    
+    {
+      "title": "Chrome拡張のKeyconfigからVimiumに乗り換えた",
+      "url": "http://hushin-text.fdempa.com/2016/11/07/chrome-keyconfig-to-vimium.html",
+      "date": "2016-11-07T00:00:00+00:00"
+    },
+    
+    {
+      "title": "Kindle本をブクログで蔵書管理する最初の一歩",
+      "url": "http://hushin-text.fdempa.com/2016/10/09/kindle-json.html",
+      "date": "2016-10-09T00:00:00+00:00"
+    },
+    
+    {
+      "title": "Jekyll と GitHub Pages で blog を書く",
+      "url": "http://hushin-text.fdempa.com/2016/06/26/jekyll-start.html",
+      "date": "2016-06-26T06:05:53+00:00"
+    }
+    
+  ]
+}

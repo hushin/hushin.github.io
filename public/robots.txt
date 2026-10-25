@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://hushin-text.fdempa.com/sitemap.xml

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ちぎっては投げるところ</title>
+    <description>技術的なメモや考えたことを残すブログ</description>
+    <link>http://hushin-text.fdempa.com/</link>
+    <atom:link href="http://hushin-text.fdempa.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 25 Oct 2026 02:17:19 +0000</pubDate>
+    <lastBuildDate>Sun, 25 Oct 2026 02:17:19 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>git, tig の設定を見直したら捗った</title>
+        <description>今まではSourcetreeでgitを操作することが多かったです。
+ただ、複数リポジトリを管理しようとするとウィンドウが複数立ち上がりややこしいという問題がありました。
+CLIでも扱えるようになっていると何かと便利なのでgitの設定を見直したら操作が捗りました。
+dotfilesはこちらになります https://github.com/hushin/dotfiles
+
+
+  zsh系
+    
+      ghq と peco と anyframe
+    
+  
+  .gitconfig
+    
+      前は短く打てるようにいろいろ登録してたけど、ほとんどtig上で操作するので不...</description>
+        <pubDate>Sun, 04 Feb 2018 23:51:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2018/02/04/update-git-config.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2018/02/04/update-git-config.html</guid>
+        
+        <category>git</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>入門git読んだ</title>
+        <description>数年前買った『入門git』、昔ちょっとだけ読んだ後放置していた。
+
+普段からgit使うようになったこともあり、久々に読んだらだいぶ分かるようになっていた。
+
+あんま使ったことないものメモ
+
+
+  前回のコミット修正
+    
+      git commit -m &quot;message&quot; --amend
+      git commit -C HEAD --amend
+    
+  
+  git merge --squash &amp;lt;ブランチ&amp;gt;
+    
+      rebase -i か no-ff 使うこと多い
+    
+  
+  git bla...</description>
+        <pubDate>Sun, 04 Feb 2018 22:37:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2018/02/04/starter-git.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2018/02/04/starter-git.html</guid>
+        
+        <category>git</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>npmモジュールの雛形を作るスクリプト</title>
+        <description>ES6の設定が面倒だったのでnpmモジュールの雛形を作るスクリプトを書きました。
+
+
+  スクリプト https://github.com/hushin/dotfiles/blob/master/bin/init-node-lib.sh
+  雛形のリポジトリ https://github.com/hushin/npm-sample-module
+
+
+作る・設定するもの
+
+
+  babel
+    
+      babel-preset-env
+      .babelrc
+    
+  
+  eslint
+    
+      eslint-config-standard
+      ....</description>
+        <pubDate>Sun, 28 Jan 2018 14:18:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2018/01/28/npm-setup.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2018/01/28/npm-setup.html</guid>
+        
+        <category>npm</category>
+        
+        <category>javascript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Chrome cVimの設定メモ</title>
+        <description>前回ChromeからFirefoxに乗り換えたのですが、
+Firefoxのタブを閉じたり移動するときにCPU100%使って固まることが頻繁に起きるようになったので結局Chromeに戻ってきました。
+
+Vimperatorライクな拡張を使いたかったので、
+一番カスタマイズできそうなcVimを導入したのでメモしておきます。
+
+設定
+
+chrome://extensions/ の cVim のオプション
+
+gistから設定をインポートできるらしいので 下記を設定 https://gist.github.com/hushin/f1a3d90b9db63026e798a90795733c6b
+
+C...</description>
+        <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2017/01/09/chrome-cvim.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2017/01/09/chrome-cvim.html</guid>
+        
+        <category>chrome</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>デフォルトブラウザをChromeからFirefoxに変えた</title>
+        <description>最近のChrome微妙だと思うことが増えてきました。
+
+
+  重いと思う場面が増えてきた
+    
+      テキスト編集中に固まる
+      タブをバックグラウンドで2,3個開くだけで固まる
+    
+  
+  頑張ってみましたが 拡張でキーバインドが変更できる範囲が限られている
+
+
+ということで長年使ってきたChromeを捨ててデフォルトブラウザをFirefoxに変えました。
+ブックマークなど簡単にインポートできました。デザインも洗練されていていい。
+
+また、使いたかったVimperatorを導入しました。
+.vimperatorrcはこちら
+dotfiles/.vimperat...</description>
+        <pubDate>Tue, 15 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2016/11/15/chrome-to-firefox.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2016/11/15/chrome-to-firefox.html</guid>
+        
+        <category>firefox</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Chrome拡張のKeyconfigからVimiumに乗り換えた</title>
+        <description>Chrome拡張のKeyconfigでキーボードショートカットを変えていたのですががChrome Version54から使えなくなりました。
+スクロールなどショートカットで行っていたのでこれができないと大変苦痛なので他の拡張を探すことに。
+
+いろいろ試した結果 Vimium を使ってみることにしました。
+調べてみた時系列順に箇条書きでメモを残します。
+
+
+  Chromeバージョン54はKeyconfigが使えないので代わりの拡張機能の紹介とか
+  昔インストールしていた Hometype を再度試す
+    
+      スクロールが滑らかでなかったりして若干合わないと思う
+    
+...</description>
+        <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2016/11/07/chrome-keyconfig-to-vimium.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2016/11/07/chrome-keyconfig-to-vimium.html</guid>
+        
+        <category>chrome</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Kindle本をブクログで蔵書管理する最初の一歩</title>
+        <description>未読本を管理するためにブクログを始めました。
+
+hush_in 本棚 - ブクログ
+
+まず本棚にある紙の未読本（70冊程）はブクログのアプリでバーコードスキャンしました。
+
+次にKindleで買った本の蔵書管理へ。
+Kindleで買っている本が 800冊 くらいあり、手動で登録するのは辛いので、
+コンテンツと端末の管理 からデータを取るようにしました。
+
+備忘録
+
+ここではデータを取得してCSVで登録する備忘録を書いておきます。自分用のメモなので解説少な目です。
+
+JSONを取得
+
+Chromeの開発者ツールを開き、 ref=myx_ajax のリクエストのうち OwnershipDat...</description>
+        <pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2016/10/09/kindle-json.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2016/10/09/kindle-json.html</guid>
+        
+        <category>kindle</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll と GitHub Pages で blog を書く</title>
+        <description>Jekyll と GitHub Pages で blog 及び静的なサイトを作れるようにしました
+
+モチベーション
+
+
+  markdown で書きたい
+  git で管理したい
+  GitHub Pages でホスティングしたい（無料なので）
+  既存のCMS飽きた
+
+
+Jekyll にした理由
+
+静的サイトジェネレータはいろいろあるようです。
+最初node.js製のHexoを試してみたのですが、下記理由によりやめました。
+
+
+  deploy用のリポジトリとは別にソース用のリポジトリ（or ブランチ）が必要
+  テーマを変えたらビルド時に失敗する
+
+
+GitHub PagesだとJe...</description>
+        <pubDate>Sun, 26 Jun 2016 06:05:53 +0000</pubDate>
+        <link>http://hushin-text.fdempa.com/2016/06/26/jekyll-start.html</link>
+        <guid isPermaLink="true">http://hushin-text.fdempa.com/2016/06/26/jekyll-start.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+    Kindle本をブクログで蔵書管理する最初の一歩 | ちぎっては投げるところ
+    
+  </title>
+  <meta name="description" content="未読本を管理するためにブクログを始めました。">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://hushin-text.fdempa.com/2016/10/09/kindle-json.html">
+  <link rel="alternate" type="application/rss+xml" title="ちぎっては投げるところ" href="http://hushin-text.fdempa.com/feed.xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+
+
+  <body>
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">ちぎっては投げるところ</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewbox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/">Home</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Kindle本をブクログで蔵書管理する最初の一歩</h1>
+    <p class="post-meta"><time datetime="2016-10-09T00:00:00+00:00" itemprop="datePublished">2016年10月09日</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>未読本を管理するためにブクログを始めました。</p>
+
+<p><a href="http://booklog.jp/users/hush1n/">hush_in 本棚 - ブクログ</a></p>
+
+<p>まず本棚にある紙の未読本（70冊程）はブクログのアプリでバーコードスキャンしました。</p>
+
+<p>次にKindleで買った本の蔵書管理へ。
+Kindleで買っている本が 800冊 くらいあり、手動で登録するのは辛いので、
+<a href="https://www.amazon.co.jp/gp/digital/fiona/manage">コンテンツと端末の管理</a> からデータを取るようにしました。</p>
+
+<h2 id="備忘録">備忘録</h2>
+
+<p>ここではデータを取得してCSVで登録する備忘録を書いておきます。自分用のメモなので解説少な目です。</p>
+
+<h3 id="jsonを取得">JSONを取得</h3>
+
+<p>Chromeの開発者ツールを開き、 ref=myx_ajax のリクエストのうち OwnershipData を取っているリクエストがあるので、curlでコピーする。 あとはcurlをいじってローカルにJSONをDLする。
+batchSizeは18になっているので100くらいにする（1000は弾かれた）。
+startIndexが0なので100ずつ増やして全部取得する。ファイル名は適当にdata1.json, data2.json … と連番で取る。</p>
+
+<h3 id="jq-コマンドでcsvにする">jq コマンドでCSVにする</h3>
+
+<p><a href="http://stedolan.github.io/jq/">jqコマンド</a> を使って整形していく。</p>
+
+<p>手始めに <code class="language-plaintext highlighter-rouge">jq '.OwnershipData.items[] | .title' data1.json</code> などと実行するとタイトル一覧が表示されることを確認。</p>
+
+<p>次に抜き出したい要素を選んでCSV化する。 slurpオプションで複数JSONを扱える。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jq -r -s '.[].OwnershipData.items[] | [.title, .authors, .asin, .acquiredDate, .acquiredTime, .sortableTitle, .sortableAuthors, .numericFileSize, .isPurchased] | @csv' *.json &gt; all.csv
+</code></pre></div></div>
+
+<h3 id="googleスプレッドシートでcsvを読み込んで整形">GoogleスプレッドシートでCSVを読み込んで整形</h3>
+
+<p>Googleスプレッドシートで先程のCSVを読み込んで整形していく。</p>
+
+<ul>
+  <li>ブクログに登録しない本はここで削除する。</li>
+  <li>CSVで読書状況も登録できるので列を追加してつける
+<img src="/images/2016/spreadsheet.png" alt="spreadsheet">
+</li>
+</ul>
+
+<p><a href="http://booklog.jp/input/file">まとめて登録 (CSV)</a>
+ここにフォーマットが載っているので別シートで揃える。
+<img src="/images/2016/spreadsheet2.png" alt="spreadsheet2"></p>
+
+<ul>
+  <li>読み終わった本は登録日時の一日後など適当に埋めた。</li>
+  <li>スプレッドシートから出力されるCSVにはダブルクオーテーションがついてないので手動で微修正。<code class="language-plaintext highlighter-rouge">,</code>を<code class="language-plaintext highlighter-rouge">","</code>に置換して行頭と行末に<code class="language-plaintext highlighter-rouge">"</code>を追加。</li>
+  <li>800件のCSV読み込ませるのが不安だったが、十秒くらいでインポートできた。</li>
+</ul>
+
+<h2 id="やってみたまとめ">やってみたまとめ</h2>
+
+<ul>
+  <li>Kindleでは800冊中約600冊は読み終えていて、200冊積読していました。
+    <ul>
+      <li>ブクログ登録前は何を読んでないか把握できていない状態でモヤモヤしていましたが、登録することで一覧できてすっきりしました。</li>
+      <li>読書状況が思い出せないのがチラホラありました。それだけ記憶に残ってないと思うとちょっともったいない。</li>
+    </ul>
+  </li>
+  <li>追加で登録していくのは簡略化したいです。こちらの記事が参考になりそうです。 <a href="http://tateren.hateblo.jp/entry/2016/10/03/025425">Kindle本をブクログに自動登録する - tateren’s diary</a>
+</li>
+</ul>
+
+  </div>
+
+  <div class="share">
+  
+  <ul>
+    <li>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </li>
+    <li>
+      <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"></a>
+      <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </li>
+    
+    <li>
+      <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+      <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="post-navigation">
+    
+      <a class="prev" href="/2016/06/26/jekyll-start.html">« Jekyll と GitHub Pages で blog を書く</a>
+    
+    
+      <a class="next" href="/2016/11/07/chrome-keyconfig-to-vimium.html">Chrome拡張のKeyconfigからVimiumに乗り換えた »</a>
+    
+  </div>
+</article>
+</div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">ちぎっては投げるところ</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hushin"><span class="icon icon--github"><svg viewbox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+</span><span class="username">hushin</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hush_in"><span class="icon icon--twitter"><svg viewbox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+</span><span class="username">hush_in</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>技術的なメモや考えたことを残すブログ</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+</html>
